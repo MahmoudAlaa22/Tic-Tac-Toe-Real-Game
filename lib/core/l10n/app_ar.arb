@@ -1,0 +1,17 @@
+{
+    "userName": "اسم المستخدم",
+    "password": "كلمة المرور",
+    "login": "تسجيل الدخول",
+    "employeeCodeOrPasswordIsWrong": "رمز الموظف أو كلمة المرور خاطئ",
+    "loginSuccess":"تم تسجيل الدخول بنجاح",
+    "thisFieldIsEmpty":"هذا الحقل فارغ",
+    "and": "و",
+    "genericError": "خطأ عام",
+    "badRequest": "اقتراح غير جيد",
+    "unauthorizedError": "خطأ غير مصرح به",
+    "notFound": "غير معثور عليه",
+    "methodNotAllowed": "الطريقة غير مسموحة",
+    "requestTimeout": "طلب مهلة",
+    "noInternetConnection": "لا اتصال إنترنت",
+    "requestWasCancelled": "تم إلغاء الطلب"
+}

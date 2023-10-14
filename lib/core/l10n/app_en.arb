@@ -1,0 +1,17 @@
+{
+    "userName": "User Name",
+    "password": "Password",
+    "login": "Login",
+    "employeeCodeOrPasswordIsWrong": "Employee code or password is wrong",
+    "loginSuccess":"Login success",
+    "thisFieldIsEmpty":"This field is empty",
+    "and": "and",
+    "genericError": "Generic error",
+    "badRequest": "Bad request",
+    "unauthorizedError": "Unauthorized Error",
+    "notFound": "Not Found",
+    "methodNotAllowed": "Method not allowed",
+    "requestTimeout": "Request Timeout",
+    "noInternetConnection": "No Internet Connection",
+    "requestWasCancelled": "Request was cancelled"
+}
