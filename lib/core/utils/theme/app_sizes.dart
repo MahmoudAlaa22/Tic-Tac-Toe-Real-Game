@@ -14,8 +14,5 @@ class AppPadding {
 }
 
 class AppRadius {
-  static double r25 = 25.r;
-  static double r10 = 10.r;
-  static double r5 = 5.r;
-  static double r2 = 2.r;
+  static double r4 = 4.r;
 }

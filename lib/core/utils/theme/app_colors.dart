@@ -1,31 +1,30 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const gradient = LinearGradient(colors: [
-    Color(0xffECECEC),
-    Color(0xffDFDFDF),
-  ]);
-  static const primary = Color(0xff00AFAA);
-  
-  static const darkGray = Color(0xff636363);
-  static const darkBlue = Color(0xff191D3A);
-  static const gray = Color(0xffa2aaad);
-  static const lightGray = Color(0xffF1F1F2);
-  static const bgTextField = Color(0xffD9D9D9);
-  static const yellow = Color(0xffFFCD00);
-  static const orange = Color(0xffF0981B);
-  static const bronze = Color(0xffCD7F32);
-  static const silver = Color(0xffC0C0C0);
-  static const platinum = Color(0xFFE5E4E2);
-  static const purple = Colors.purple;
-  static const teal = Colors.teal;
-  static const cyan = Colors.cyan;
-  static const black = Color(0xff1E1E1E);
-  static const darkBlack = Color(0xff121212);
-  static const background = Color(0xffFFFFFF);
-  static const darkBackground = Color(0xff2E2E2E);
   static const white = Color(0xffFFFFFF);
-  static const error = Color(0xffF01F0E);
-  static const success = Color(0xff2D6A4F);
-  static const helpBlue = Color(0xff3282B8);
+  static const lighterGray = Color(0xffF1F1F1);
+  static const lightGray = Color(0xffE3E3E3);
+  static const gray = Color(0xffADADAD);
+  static const darkGray = Color(0xff808080);
+  static const darkerGray = Color(0xff575757);
+  static const darkestGray = Color(0xff282828);
+  static const black = Color(0xff000000);
+  static _LightTheme lightTheme = _LightTheme();
+  static _DarkTheme darkTheme = _DarkTheme();
+}
+
+class _LightTheme {
+  final blue = const Color(0xff46A3FF);
+  final green = const Color(0xff00C096);
+  final red = const Color(0xffFF827E);
+  final yellow = const Color(0xffFFB048);
+}
+
+class _DarkTheme {
+  final blue = const Color(0xff2475C5);
+  final green = const Color(0xff00A682);
+  final red = const Color(0xffE45651);
+  final darkBlue = const Color(0xff212835);
+  final darkerBlue = const Color(0xff12161F);
+  final dark = const Color(0xff0C1017);
 }

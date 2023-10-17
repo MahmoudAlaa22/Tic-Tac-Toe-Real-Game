@@ -4,169 +4,116 @@ import 'theme_export.dart';
 
 class AppThemes {
   static ThemeData lightTheme = ThemeData(
-      platform: TargetPlatform.iOS,
-      primaryColor: AppColors.primary,
-      primaryColorLight: AppColors.primary,
-      primaryColorDark: AppColors.primary,
-      colorScheme: ThemeData().colorScheme.copyWith(
-            secondary: AppColors.primary,
-          ),
-      appBarTheme: const AppBarTheme(
-          backgroundColor: AppColors.white,
-          centerTitle: true,
-          elevation: 0.0,
-          titleTextStyle: TextStyle(
-            color: AppColors.primary,
-            fontSize: 24,
-            fontWeight: FontWeight.w700,
-            fontFamily: AppFonts.cairo,
-          ),
-          iconTheme: IconThemeData(
-            color: AppColors.primary,
-          ),
-          actionsIconTheme: IconThemeData(
-            color: AppColors.primary,
-          )),
-      scaffoldBackgroundColor: AppColors.background,
-      splashColor: AppColors.primary.withOpacity(0.2),
-      highlightColor: AppColors.primary.withOpacity(0.1),
-      iconTheme: const IconThemeData(
-        color: AppColors.primary,
-      ),
-      textTheme: const TextTheme(
-        headlineMedium:
-            TextStyle(color: AppColors.black, fontWeight: FontWeight.bold),
-        bodyMedium: TextStyle(
-          color: AppColors.black,
+    platform: TargetPlatform.iOS,
+    primaryColor: AppColors.white,
+    primaryColorLight: AppColors.white,
+    colorScheme: ThemeData().colorScheme.copyWith(
+          secondary: AppColors.white,
         ),
-      ),
-      primaryIconTheme: const IconThemeData(color: AppColors.primary),
-      inputDecorationTheme: InputDecorationTheme(
-          contentPadding: const EdgeInsets.all(15),
-          hintStyle: const TextStyle(color: AppColors.gray),
-          labelStyle: const TextStyle(color: AppColors.darkBlue),
-          errorStyle: const TextStyle(color: AppColors.error),
-          prefixIconColor: AppColors.primary,
-          suffixIconColor: AppColors.primary,
-          fillColor: AppColors.white,
-          filled: true,
-          border: InputBorder.none,
-          enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-              borderSide: const BorderSide(color: AppColors.primary)),
-          focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-              borderSide: const BorderSide(color: AppColors.primary)),
-          errorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-              borderSide: const BorderSide(color: AppColors.error)),
-          focusedErrorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-              borderSide: const BorderSide(color: AppColors.error)),
-          disabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-              borderSide: const BorderSide(color: AppColors.primary))),
-      textButtonTheme: TextButtonThemeData(
-          style: ButtonStyle(
-              overlayColor: MaterialStatePropertyAll<Color>(
-        AppColors.primary.withOpacity(0.1),
-      ))),
-      indicatorColor: AppColors.primary,
-      dividerColor: AppColors.primary,
-      dividerTheme:
-          const DividerThemeData(color: AppColors.primary, thickness: 2),
-      sliderTheme: SliderThemeData(
-          thumbColor: AppColors.primary,
-          activeTrackColor: AppColors.primary,
-          inactiveTrackColor: AppColors.primary.withOpacity(0.2)),
-      radioTheme: const RadioThemeData(
-          fillColor: MaterialStatePropertyAll<Color>(
-        AppColors.primary,
-      )),
-      checkboxTheme: CheckboxThemeData(
+    scaffoldBackgroundColor: AppColors.white,
+    iconTheme: const IconThemeData(
+      color: AppColors.white,
+    ),
+    primaryIconTheme: const IconThemeData(color: AppColors.white),
+    textTheme: TextTheme(
+      displayLarge: AppTextStyles.header1,
+      displaySmall: AppTextStyles.header2,
+      headlineLarge: AppTextStyles.subtitle1,
+      headlineMedium: AppTextStyles.subtitle1M,
+      titleLarge: AppTextStyles.subtitle2,
+      titleMedium: AppTextStyles.subtitle2M,
+      bodyLarge: AppTextStyles.body1.copyWith(color: AppColors.gray),
+      bodyMedium: AppTextStyles.body1M.copyWith(color: AppColors.gray),
+      bodySmall: AppTextStyles.body2.copyWith(color: AppColors.gray),
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+        contentPadding: const EdgeInsets.all(15),
+        hintStyle: AppTextStyles.body1.copyWith(color: AppColors.gray),
+        labelStyle: AppTextStyles.body1.copyWith(color: AppColors.gray),
+        errorStyle: TextStyle(color: AppColors.lightTheme.red),
+        prefixIconColor: AppColors.gray,
+        suffixIconColor: AppColors.gray,
+        fillColor: AppColors.white,
+        filled: true,
+        border: InputBorder.none,
+        enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(AppRadius.r4),
+            borderSide: const BorderSide(color: AppColors.lightGray)),
+        focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(AppRadius.r4),
+            borderSide: BorderSide(color: AppColors.lightTheme.blue)),
+        errorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(AppRadius.r4),
+            borderSide: BorderSide(color: AppColors.lightTheme.red)),
+        focusedErrorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(AppRadius.r4),
+            borderSide: BorderSide(color: AppColors.lightTheme.red)),
+        disabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(AppRadius.r4),
+            borderSide: const BorderSide(color: AppColors.lightGray))),
+    dividerColor: AppColors.lightTheme.blue,
+    dividerTheme:
+        const DividerThemeData(color: AppColors.lightGray, thickness: 2),
+    radioTheme: RadioThemeData(
         fillColor: MaterialStatePropertyAll<Color>(
-          AppColors.gray.withOpacity(0.5),
-        ),
-        checkColor: const MaterialStatePropertyAll<Color>(
-          AppColors.primary,
-        ),
-      ),);
+      AppColors.lightTheme.blue,
+    )),
+  );
 
-  // static ThemeData dark = ThemeData(
-  //   platform: TargetPlatform.iOS,
-  //   primaryColor: AppColors.primary,
-  //   primaryColorLight: AppColors.primary,
-  //   primaryColorDark: AppColors.primary,
-  //   colorScheme: ThemeData().colorScheme.copyWith(
-  //         secondary: AppColors.primary,
-  //       ),
-  //   appBarTheme: const AppBarTheme(
-  //       backgroundColor: AppColors.darkBlack,
-  //       centerTitle: true,
-  //       titleTextStyle: TextStyle(
-  //         color: AppColors.white,
-  //         fontWeight: FontWeight.bold,
-  //         fontSize: 20,
-  //       ),
-  //       iconTheme: IconThemeData(
-  //         color: AppColors.primary,
-  //       ),
-  //       actionsIconTheme: IconThemeData(
-  //         color: AppColors.primary,
-  //       )),
-  //   scaffoldBackgroundColor: AppColors.darkBackground,
-  //   splashColor: AppColors.primary.withOpacity(0.2),
-  //   highlightColor: AppColors.primary.withOpacity(0.1),
-  //   iconTheme: const IconThemeData(
-  //     color: AppColors.primary,
-  //   ),
-  //   textTheme: const TextTheme(
-  //     headlineMedium:
-  //         TextStyle(color: AppColors.white, fontWeight: FontWeight.bold),
-  //     bodyMedium: TextStyle(
-  //       color: AppColors.white,
-  //     ),
-  //   ),
-  //   primaryIconTheme: const IconThemeData(color: AppColors.primary),
-  //   inputDecorationTheme: InputDecorationTheme(
-  //       contentPadding: const EdgeInsets.all(15),
-  //       // hint style
-  //       hintStyle: const TextStyle(color: AppColors.gray),
-  //       // label style
-  //       labelStyle: const TextStyle(color: AppColors.gray),
-  //       // error style
-  //       errorStyle: const TextStyle(color: AppColors.error),
-  //       prefixIconColor: AppColors.primary,
-  //       suffixIconColor: AppColors.primary,
-  //       fillColor: AppColors.darkBlack,
-  //       filled: true,
-  //       border: InputBorder.none,
-  //       focusedBorder:
-  //           OutlineInputBorder(borderRadius: BorderRadius.circular(4)),
-  //       enabledBorder:
-  //           OutlineInputBorder(borderRadius: BorderRadius.circular(4)),
-  //       errorBorder: OutlineInputBorder(
-  //           borderRadius: BorderRadius.circular(4),
-  //           borderSide: const BorderSide(color: AppColors.error)),
-  //       focusedErrorBorder: OutlineInputBorder(
-  //           borderRadius: BorderRadius.circular(4),
-  //           borderSide: const BorderSide(color: AppColors.error))),
-  //   textButtonTheme: TextButtonThemeData(
-  //       style: ButtonStyle(
-  //           overlayColor: MaterialStatePropertyAll<Color>(
-  //     AppColors.primary.withOpacity(0.1),
-  //   ))),
-  //   indicatorColor: AppColors.primary,
-  //   dividerColor: AppColors.primary,
-  //   dividerTheme:
-  //       const DividerThemeData(color: AppColors.primary, thickness: 2),
-  //   sliderTheme: SliderThemeData(
-  //       thumbColor: AppColors.primary,
-  //       activeTrackColor: AppColors.primary,
-  //       inactiveTrackColor: AppColors.primary.withOpacity(0.2)),
-  //   radioTheme: const RadioThemeData(
-  //       fillColor: MaterialStatePropertyAll<Color>(
-  //     AppColors.primary,
-  //   )),
-  // );
+  static ThemeData darkTheme = ThemeData(
+    platform: TargetPlatform.iOS,
+    primaryColor: AppColors.darkTheme.dark,
+    primaryColorLight: AppColors.darkTheme.dark,
+    colorScheme: ThemeData().colorScheme.copyWith(
+          secondary: AppColors.darkTheme.dark,
+        ),
+    scaffoldBackgroundColor: AppColors.darkTheme.dark,
+    iconTheme: IconThemeData(
+      color: AppColors.darkTheme.dark,
+    ),
+    textTheme: TextTheme(
+      displayLarge: AppTextStyles.header1.copyWith(color: AppColors.gray),
+      displaySmall: AppTextStyles.header2.copyWith(color: AppColors.gray),
+      headlineLarge: AppTextStyles.subtitle1.copyWith(color: AppColors.gray),
+      headlineMedium: AppTextStyles.subtitle1M.copyWith(color: AppColors.gray),
+      titleLarge: AppTextStyles.subtitle2.copyWith(color: AppColors.gray),
+      titleMedium: AppTextStyles.subtitle2M.copyWith(color: AppColors.gray),
+      bodyLarge: AppTextStyles.body1.copyWith(color: AppColors.gray),
+      bodyMedium: AppTextStyles.body1M.copyWith(color: AppColors.gray),
+      bodySmall: AppTextStyles.body2.copyWith(color: AppColors.darkerGray),
+    ),
+    primaryIconTheme: IconThemeData(color: AppColors.darkTheme.dark),
+    inputDecorationTheme: InputDecorationTheme(
+        contentPadding: const EdgeInsets.all(15),
+        hintStyle: AppTextStyles.body1.copyWith(color: AppColors.darkerGray),
+        labelStyle: AppTextStyles.body1.copyWith(color: AppColors.darkerGray),
+        errorStyle: TextStyle(color: AppColors.lightTheme.red),
+        prefixIconColor: AppColors.darkerGray,
+        suffixIconColor: AppColors.darkerGray,
+        fillColor: AppColors.darkTheme.dark,
+        filled: true,
+        border: InputBorder.none,
+        enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(AppRadius.r4),
+            borderSide: const BorderSide(color: AppColors.darkerGray)),
+        focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(AppRadius.r4),
+            borderSide: BorderSide(color: AppColors.lightTheme.blue)),
+        errorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(AppRadius.r4),
+            borderSide: BorderSide(color: AppColors.lightTheme.red)),
+        focusedErrorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(AppRadius.r4),
+            borderSide: BorderSide(color: AppColors.lightTheme.red)),
+        disabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(AppRadius.r4),
+            borderSide: const BorderSide(color: AppColors.darkerGray))),
+    dividerColor: AppColors.darkTheme.blue,
+    dividerTheme:
+        const DividerThemeData(color: AppColors.darkerGray, thickness: 2),
+    radioTheme: RadioThemeData(
+        fillColor: MaterialStatePropertyAll<Color>(
+      AppColors.darkTheme.blue,
+    )),
+  );
 }

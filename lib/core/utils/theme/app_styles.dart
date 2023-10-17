@@ -3,31 +3,54 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../theme/theme_export.dart';
 
 class AppTextStyles {
-  static TextStyle headLine = TextStyle(
+  static TextStyle header1 = TextStyle(
     color: AppColors.black,
-    fontSize: 35.sp,
+    fontSize: 24.sp,
     fontWeight: FontWeight.bold,
     fontFamily: AppFonts.cairo,
   );
-  static TextStyle title = TextStyle(
+  static TextStyle header2 = TextStyle(
     color: AppColors.black,
     fontSize: 24.sp,
-    fontWeight: FontWeight.w700,
+    fontWeight: FontWeight.w300,
     fontFamily: AppFonts.cairo,
   );
-  static TextStyle body = TextStyle(
-    color: AppColors.black,
-    fontSize: 20.sp,
-    fontFamily: AppFonts.cairo,
-  );
-  static TextStyle subTitle = TextStyle(
+  static TextStyle subtitle1 = TextStyle(
     color: AppColors.black,
     fontSize: 18.sp,
     fontFamily: AppFonts.cairo,
   );
-  static TextStyle small = TextStyle(
+  static TextStyle subtitle1M = TextStyle(
+    color: AppColors.black,
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: AppFonts.cairo,
+  );
+  static TextStyle subtitle2 = TextStyle(
+    color: AppColors.black,
+    fontSize: 16.sp,
+    fontFamily: AppFonts.cairo,
+  );
+   static TextStyle subtitle2M = TextStyle(
+    color: AppColors.black,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: AppFonts.cairo,
+  );
+   static TextStyle body1 = TextStyle(
     color: AppColors.black,
     fontSize: 14.sp,
+    fontFamily: AppFonts.cairo,
+  );
+   static TextStyle body1M = TextStyle(
+    color: AppColors.black,
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: AppFonts.cairo,
+  );
+   static TextStyle body2 = TextStyle(
+    color: AppColors.black,
+    fontSize: 12.sp,
     fontFamily: AppFonts.cairo,
   );
 }
