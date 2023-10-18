@@ -6,7 +6,6 @@ class ValidateMessages {
 }
 
 class _ErrorMessage {
-  final userLogin = AppStrings.tr.employeeCodeOrPasswordIsWrong;
   final emptyField = AppStrings.tr.thisFieldIsEmpty;
   final genericError = AppStrings.tr.genericError;
   final badRequest = AppStrings.tr.badRequest;
@@ -18,6 +17,4 @@ class _ErrorMessage {
   final requestWasCancelled = AppStrings.tr.requestWasCancelled;
 }
 
-class _SuccessMessage {
-  final userLogin = AppStrings.tr.loginSuccess;
-}
+class _SuccessMessage {}
