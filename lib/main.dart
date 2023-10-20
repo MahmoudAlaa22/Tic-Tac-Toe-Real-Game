@@ -1,7 +1,11 @@
+import 'dart:developer';
+
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'core/core_export.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initServiceLocator();
   runApp(const MyApp());
 }
 
@@ -14,24 +18,31 @@ class MyApp extends StatelessWidget {
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (context, child) {
-          return AdaptiveTheme(
-            initial: AdaptiveThemeMode.light,
-            light: AppThemes.lightTheme,
-            dark: AppThemes.darkTheme,
-            builder: (theme, darkTheme) => MaterialApp(
-              // showPerformanceOverlay: true,
-              debugShowCheckedModeBanner: false,
-              localizationsDelegates: AppLocalizations.localizationsDelegates,
-              supportedLocales: AppLocalizations.supportedLocales,
-              // locale: _locale,
-              locale: const Locale('ar'),
-              theme: AppThemes.lightTheme,
-              darkTheme: AppThemes.darkTheme,
-              home: const Scaffold(),
-              // onGenerateRoute: onGenerate,
-              // initialRoute: AppRoutes.splashRoute,
-            ),
-          );
+          return MultiBlocProvider(
+              providers: [
+                BlocProvider(
+                    create: (_) => serviceLocator<SettingCubit>()..excute()),
+              ],
+              child: BlocBuilder<SettingCubit, SettingState>(
+                buildWhen: (previous, current) =>
+                    current is ThemeLoadedState ||
+                    current is LanguageLoadedState,
+                builder: (context, state) {
+                  final settingCubit = SettingCubit.get(context);
+                  return MaterialApp(
+                    debugShowCheckedModeBanner: false,
+                    localizationsDelegates:
+                        AppLocalizations.localizationsDelegates,
+                    supportedLocales: AppLocalizations.supportedLocales,
+                    // locale: _locale,
+                    locale: const Locale('en'),
+                    theme: settingCubit.themeCustom?.getThemeData(),
+                    // darkTheme: darkTheme,
+                    onGenerateRoute: onGenerate,
+                    initialRoute: AppRoutes.splashRoute,
+                  );
+                },
+              ));
         });
   }
 }

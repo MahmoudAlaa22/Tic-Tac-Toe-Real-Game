@@ -31,6 +31,11 @@ class _AppImagesSVG {
   ///svg file path that has image has type [SVG]
   static String _filePathSVG(v) => "$_filePath/svg/$v.svg";
   //? add file path like 👇
+  final String logo1 = _filePathSVG("logo1");
+  final String logo2 = _filePathSVG("logo2");
+  final String onboardingImage1 = _filePathSVG("onboardingImage1");
+  final String onboardingImage2 = _filePathSVG("onboardingImage2");
+  final String onboardingImage3 = _filePathSVG("onboardingImage3");
 }
 
 class _AppImagesJPG {

@@ -21,6 +21,7 @@ Future<void> initServiceLocator() async {
       () => NetworkServiceImpl(serviceLocator()));
   serviceLocator
       .registerLazySingleton<LookupsService>(() => LookupsServiceImpl());
+  // serviceLocator.registerLazySingleton<ThemeService>(() => ThemeServiceImpl());
   //! ################################ Datasources #################################
   // serviceLocator.registerLazySingleton<ReservationRemoteDatasource>(
   //     () => ReservationRemoteDatasourceImpl());

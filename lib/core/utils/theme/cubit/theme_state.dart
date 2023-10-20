@@ -8,7 +8,5 @@ abstract class SettingState extends Equatable {
 }
 
 class ThemeInitial extends SettingState {}
-class ThemeLoadingState extends SettingState {}
 class ThemeLoadedState extends SettingState {}
-class LanguageLoadingState extends SettingState {}
 class LanguageLoadedState extends SettingState {}
