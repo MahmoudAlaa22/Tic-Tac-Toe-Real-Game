@@ -1,5 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../../features/features_export.dart';
 import '../core_export.dart';
 
 final serviceLocator = GetIt.instance;
@@ -21,6 +22,7 @@ Future<void> initServiceLocator() async {
       () => NetworkServiceImpl(serviceLocator()));
   serviceLocator
       .registerLazySingleton<LookupsService>(() => LookupsServiceImpl());
+  // serviceLocator.registerLazySingleton<ThemeService>(() => ThemeServiceImpl());
   //! ################################ Datasources #################################
   // serviceLocator.registerLazySingleton<ReservationRemoteDatasource>(
   //     () => ReservationRemoteDatasourceImpl());
@@ -33,5 +35,6 @@ Future<void> initServiceLocator() async {
   // serviceLocator.registerLazySingleton(() => ReservationUsecase());
 
   //! ############################### Bloc Or Cubit ###############################
-  serviceLocator.registerFactory(() => SettingCubit());
+  serviceLocator.registerFactory(() => ThemeCubit());
+  serviceLocator.registerFactory(() => SplashAndOnboardingCubit());
 }

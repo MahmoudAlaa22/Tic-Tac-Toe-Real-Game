@@ -4,7 +4,7 @@ abstract class SplashAndOnboardingState extends Equatable {
   const SplashAndOnboardingState();
 
   @override
-  List<Object> get props => [];
+  List<Object> get props => [identityHashCode(this)];
 }
 
 class SplashAndOnboardingInitial extends SplashAndOnboardingState {}

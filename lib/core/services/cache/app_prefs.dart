@@ -1,16 +1,18 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
-
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../core_export.dart';
 
-class AppPrefKey{
-static const String PREFS_KEY_LANG = "PREFS_KEY_LANG";
-static const String PREFS_KEY_ONBOARDING_SCREEN = "PREFS_KEY_ONBOARDING_SCREEN";
-static const String PREFS_KEY_IS_USER_LOGGED_IN = "PREFS_KEY_IS_USER_LOGGED_IN";
-static const String PREFS_KEY_TOKEN = "PREFS_KEY_TOKEN";
+class AppPrefKey {
+  static const String PREFS_KEY_LANG = "PREFS_KEY_LANG";
+  static const String PREFS_KEY_ONBOARDING_SCREEN =
+      "PREFS_KEY_ONBOARDING_SCREEN";
+  static const String PREFS_KEY_IS_USER_LOGGED_IN =
+      "PREFS_KEY_IS_USER_LOGGED_IN";
+  static const String PREFS_KEY_TOKEN = "PREFS_KEY_TOKEN";
+  static const String THEME = 'THEME';
 }
 
 class AppPreferences {
@@ -57,7 +59,8 @@ class AppPreferences {
   }
 
   Future<bool> isOnBoardingScreenViewed() async {
-    return sharedPreferences.getBool(AppPrefKey.PREFS_KEY_ONBOARDING_SCREEN) ?? false;
+    return sharedPreferences.getBool(AppPrefKey.PREFS_KEY_ONBOARDING_SCREEN) ??
+        false;
   }
 
   Future<void> setUserToken({required String token}) async {
@@ -73,11 +76,20 @@ class AppPreferences {
   }
 
   Future<bool> isUserLoggedIn() async {
-    return sharedPreferences.getBool(AppPrefKey.PREFS_KEY_IS_USER_LOGGED_IN) ?? false;
+    return sharedPreferences.getBool(AppPrefKey.PREFS_KEY_IS_USER_LOGGED_IN) ??
+        false;
   }
 
   Future<void> logout() async {
     sharedPreferences.remove(AppPrefKey.PREFS_KEY_IS_USER_LOGGED_IN);
+  }
+
+    Future<void> setTheme({required String theme}) async {
+    sharedPreferences.setString(AppPrefKey.THEME, theme);
+  }
+
+  Future<String> getTheme() async {
+    return sharedPreferences.getString(AppPrefKey.THEME) ?? "";
   }
 
 }

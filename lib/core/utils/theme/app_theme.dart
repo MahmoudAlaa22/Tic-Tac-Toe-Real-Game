@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'theme_export.dart';
 
 class AppThemes {
-  static ThemeData lightTheme = ThemeData(
+  static ThemeData lightTheme = ThemeData.light().copyWith(
     platform: TargetPlatform.iOS,
     primaryColor: AppColors.white,
     primaryColorLight: AppColors.white,
@@ -60,7 +60,7 @@ class AppThemes {
     )),
   );
 
-  static ThemeData darkTheme = ThemeData(
+  static ThemeData darkTheme = ThemeData.dark().copyWith(
     platform: TargetPlatform.iOS,
     primaryColor: AppColors.darkTheme.dark,
     primaryColorLight: AppColors.darkTheme.dark,

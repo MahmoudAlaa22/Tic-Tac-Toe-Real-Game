@@ -1,12 +1,8 @@
-
-
-// import 'package:flutter/material.dart';
-
 // import '../../core_export.dart';
 
-
 // class ThemeServiceImpl implements ThemeService {
-//   ThemeMode _currentThemeMode = ThemeMode.dark; // for first time launch default theme will be dark theme
+//   ThemeMode _currentThemeMode = ThemeMode.dark;
+//   // for first time launch default theme will be dark theme
 
 //   @override
 //   ThemeMode changeTheme(AppThemeMode mode) {
@@ -30,20 +26,20 @@
 //     var storageController = serviceLocator<AppPreferences>();
 //     switch (mode) {
 //       case AppThemeMode.LIGHT:
-//         storageController.setTheme(AppThemeMode.LIGHT.name);
+//         storageController.setTheme(theme: AppThemeMode.LIGHT.name);
 //         break;
 //       case AppThemeMode.DARK:
-//         storageController.setTheme(AppThemeMode.DARK.name);
+//         storageController.setTheme(theme: AppThemeMode.DARK.name);
 //         break;
 //       case AppThemeMode.SYSTEM:
-//         storageController.setTheme(AppThemeMode.SYSTEM.name);
+//         storageController.setTheme(theme: AppThemeMode.SYSTEM.name);
 //         break;
 //     }
 //   }
 
 //   @override
 //   Future<ThemeMode> loadSavedTheme() async {
-//     String? themeName = await serviceLocator<CacheService>().getTheme();
+//     String? themeName = await serviceLocator<AppPreferences>().getTheme();
 //     return _getTheme(themeName);
 //   }
 
@@ -66,5 +62,17 @@
 //   @override
 //   ThemeMode getCurrentThemeMode() {
 //     return _currentThemeMode;
+//   }
+  
+//   @override
+//   String getLogoTheme() {
+//     switch (_currentThemeMode) {
+//       case ThemeMode.light:
+//         return AppImages.svg.logo1;
+//       case ThemeMode.dark:
+//         return AppImages.svg.logo2;
+//       case ThemeMode.system:
+//         return AppImages.svg.logo2;
+//     }
 //   }
 // }

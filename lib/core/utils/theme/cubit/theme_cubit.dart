@@ -1,38 +1,32 @@
-
 import 'dart:developer';
 
 import '../../../core_export.dart';
 
 part 'theme_state.dart';
 
-class SettingCubit extends Cubit<SettingState> {
-  SettingCubit() : super(ThemeInitial());
-  static SettingCubit get(BuildContext context) => BlocProvider.of(context);
-  bool isDark = false;
+class ThemeCubit extends Cubit<ThemeState> {
+  ThemeCubit() : super(ThemeInitial());
+  static ThemeCubit get(BuildContext context) => BlocProvider.of(context);
   String? language;
+  ThemeCustom? themeCustom;
 
-  Future<void> getTheme() async {
-    emit(ThemeLoadingState());
-    final theme = await AdaptiveTheme.getThemeMode();
-    log('########## theme ---------------> $theme');
-    if (theme != null) isDark = theme.isDark;
-    log('########## isDark ---------------> $isDark');
+  Future<void> excute({required String theme}) async {
+    await getTheme(theme: theme);
+    await getLanguage();
+  }
+
+  Future<void> getTheme({required String theme}) async {
+    log('theme is $theme');
+    if (theme.isNullOrEmpty) {
+      theme = AppThemeMode.LIGHT.name;
+      serviceLocator<AppPreferences>().setTheme(theme: theme);
+    }
+    themeCustom = ThemeFactory.getThemeCustom(theme: theme);
     emit(ThemeLoadedState());
   }
 
-  Future<void> onToggleChange(BuildContext context) async {
-    if (isDark)
-      AdaptiveTheme.of(context).setLight();
-    else
-      AdaptiveTheme.of(context).setDark();
-    await getTheme();
-  }
-
   Future<void> getLanguage() async {
-    emit(LanguageLoadingState());
     language = await serviceLocator<AppPreferences>().getAppLanguage();
     emit(LanguageLoadedState());
   }
-
-  bool isEnglish() => language == 'en';
 }
