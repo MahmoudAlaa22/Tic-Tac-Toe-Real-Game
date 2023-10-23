@@ -65,7 +65,10 @@ dependencies:
   internet_connection_checker: ^1.0.0+1
   # Handle offline / online connectivity.
   flutter_offline: ^3.0.0
-
+  # Onboarding screens
+  introduction_screen: ^3.1.12
+  # Page Transition.
+  page_transition: ^2.1.0 
 dev_dependencies:
   flutter_test:
     sdk: flutter

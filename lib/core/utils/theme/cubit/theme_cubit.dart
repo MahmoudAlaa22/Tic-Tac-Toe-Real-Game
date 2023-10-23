@@ -4,20 +4,24 @@ import '../../../core_export.dart';
 
 part 'theme_state.dart';
 
-class SettingCubit extends Cubit<SettingState> {
-  SettingCubit() : super(ThemeInitial());
-  static SettingCubit get(BuildContext context) => BlocProvider.of(context);
+class ThemeCubit extends Cubit<ThemeState> {
+  ThemeCubit() : super(ThemeInitial());
+  static ThemeCubit get(BuildContext context) => BlocProvider.of(context);
   String? language;
   ThemeCustom? themeCustom;
 
-  Future<void> excute() async {
-    await getTheme();
+  Future<void> excute({required String theme}) async {
+    await getTheme(theme: theme);
     await getLanguage();
   }
 
-  Future<void> getTheme() async {
-    final theme = await serviceLocator<AppPreferences>().getTheme();
-    themeCustom = ThemeFactory.getThemeCustom(theme: AppThemeMode.DARK.name);
+  Future<void> getTheme({required String theme}) async {
+    log('theme is $theme');
+    if (theme.isNullOrEmpty) {
+      theme = AppThemeMode.LIGHT.name;
+      serviceLocator<AppPreferences>().setTheme(theme: theme);
+    }
+    themeCustom = ThemeFactory.getThemeCustom(theme: theme);
     emit(ThemeLoadedState());
   }
 
@@ -25,5 +29,4 @@ class SettingCubit extends Cubit<SettingState> {
     language = await serviceLocator<AppPreferences>().getAppLanguage();
     emit(LanguageLoadedState());
   }
-
 }

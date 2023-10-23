@@ -1,1 +1,1 @@
-export 'splash_and_onboarding/export.dart';
+export 'splash_and_onboarding/splash_and_onboarding_export.dart';
