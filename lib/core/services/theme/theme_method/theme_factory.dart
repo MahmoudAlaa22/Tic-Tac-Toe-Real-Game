@@ -9,6 +9,7 @@ abstract class ThemeCustom {
   Color get inActiveColor;
   // Make a Bottom Bar Model has background color, active color, inActive color.
   BottomBarModel get bottomBar;
+  Color get boxBorderColor;
 }
 
 class ThemeFactory {

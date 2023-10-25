@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'core/core_export.dart';
 import 'features/features_export.dart';
@@ -18,8 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-        minTextAdapt: true,
-        splitScreenMode: true,
+      designSize: const Size(360,690),
         builder: (context, child) {
           return MultiBlocProvider(
               providers: [
@@ -35,25 +36,19 @@ class MyApp extends StatelessWidget {
                     current is LanguageLoadedState,
                 builder: (context, state) {
                   final settingCubit = ThemeCubit.get(context);
-                  return AdaptiveTheme(
-                    light: settingCubit.themeCustom?.themeData ??
-                        AppThemes.lightTheme,
-                    dark: settingCubit.themeCustom?.themeData ??
-                        AppThemes.darkTheme,
-                    initial: AdaptiveThemeMode.light,
-                    builder: (theme, darkTheme) => MaterialApp(
+                  log('theme is ${settingCubit.themeCustom}');
+                  return MaterialApp(
                       debugShowCheckedModeBanner: false,
                       localizationsDelegates:
                           AppLocalizations.localizationsDelegates,
                       supportedLocales: AppLocalizations.supportedLocales,
                       // locale: _locale,
                       locale: const Locale('en'),
-                      theme: theme,
-                      darkTheme: darkTheme,
+                      theme: settingCubit.themeCustom?.themeData,
+                      darkTheme: settingCubit.themeCustom?.themeData,
                       onGenerateRoute: onGenerate,
                       initialRoute: AppRoutes.splashRoute,
-                    ),
-                  );
+                    );
                 },
               ));
         });

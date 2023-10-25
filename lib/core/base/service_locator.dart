@@ -8,6 +8,7 @@ final serviceLocator = GetIt.instance;
 Future<void> initServiceLocator() async {
   //! ############################### Package ###############################
   final sharedPref = await SharedPreferences.getInstance();
+  await ScreenUtil.ensureScreenSize();
   serviceLocator.registerLazySingleton(() => sharedPref);
   serviceLocator.registerLazySingleton<Dio>(() => Dio());
   serviceLocator.registerLazySingleton<InternetConnectionChecker>(

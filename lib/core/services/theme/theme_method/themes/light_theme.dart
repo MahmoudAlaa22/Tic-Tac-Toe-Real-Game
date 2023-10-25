@@ -25,4 +25,7 @@ class LightTheme extends ThemeCustom {
         primary: AppColors.black,
         secondary: AppColors.gray,
       );
+
+  @override
+  Color get boxBorderColor => AppColors.lightGray;
 }

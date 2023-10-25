@@ -69,6 +69,8 @@ dependencies:
   introduction_screen: ^3.1.12
   # Page Transition.
   page_transition: ^2.1.0 
+  # Google sign in
+  google_sign_in: ^6.1.5
 dev_dependencies:
   flutter_test:
     sdk: flutter
