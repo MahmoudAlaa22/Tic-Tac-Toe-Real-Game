@@ -25,12 +25,19 @@ class SplashAndOnboardingCubit extends Cubit<SplashAndOnboardingState> {
   Future<void> handleNavigationToNextPage(BuildContext context) async {
     final isOnBoardingScreenViewed =
         await serviceLocator<AppPreferences>().isOnBoardingScreenViewed();
-    log('isOnBoardingScreenViewed $isOnBoardingScreenViewed');
     if (isOnBoardingScreenViewed) {
-      // Navigator.pushReplacementNamed(context, AppRoutes.loginRoute);
+      Navigator.pushReplacementNamed(context, AppRoutes.loginPageRoute);
     } else {
-      // await serviceLocator<AppPreferences>().setOnBoardingScreenViewed();
+      await serviceLocator<AppPreferences>().setOnBoardingScreenViewed();
       Navigator.pushReplacementNamed(context, AppRoutes.onBoardingRoute);
     }
   }
+
+  /// todo(2.1): create method called handleOnBoardingDone to handle onBoarding done
+  /// save data locally and navigate to preparing page
+  Future<void> handleOnBoardingDone(BuildContext context) async {
+    Navigator.pushReplacementNamed(context, AppRoutes.loginPageRoute);
+    await serviceLocator<AppPreferences>().setOnBoardingScreenViewed();
+  }
+  
 }

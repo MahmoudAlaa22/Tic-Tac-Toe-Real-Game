@@ -36,6 +36,9 @@ class _AppImagesSVG {
   final String onboardingImage1 = _filePathSVG("onboardingImage1");
   final String onboardingImage2 = _filePathSVG("onboardingImage2");
   final String onboardingImage3 = _filePathSVG("onboardingImage3");
+  final String google = _filePathSVG("google");
+  final String facebook = _filePathSVG("facebook");
+  final String retry = _filePathSVG("retry");
 }
 
 class _AppImagesJPG {

@@ -24,4 +24,6 @@ class DarkTheme extends ThemeCustom {
         primary: AppColors.gray,
         secondary: AppColors.darkerGray,
       );
+  @override
+  Color get boxBorderColor => AppColors.darkGray;
 }
