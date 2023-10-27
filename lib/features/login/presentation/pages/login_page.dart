@@ -1,11 +1,14 @@
 import 'package:tic_tac_toe_real_game/core/core_export.dart';
 import 'package:tic_tac_toe_real_game/widgets/app_button.dart';
 
+import '../../../features_export.dart';
+
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final loginCubit = LoginCubit.get(context);
     return Scaffold(
       body: BlocBuilder<ThemeCubit, ThemeState>(
           buildWhen: (previous, current) =>
@@ -41,7 +44,7 @@ class LoginPage extends StatelessWidget {
                     title: AppStrings.tr.googleSignIn,
                     hasBorder: true,
                     image: AppImages.svg.google,
-                    onTap: () {},
+                    onTap: () async => await loginCubit.signInWithGoogle(),
                   ),
                   SizedBox(
                     height: 0.02.sh,
@@ -50,7 +53,7 @@ class LoginPage extends StatelessWidget {
                     title: AppStrings.tr.facebookSignIn,
                     hasBorder: true,
                     image: AppImages.svg.facebook,
-                    onTap: () {},
+                    onTap: () async => await loginCubit.signInWithFacebook(),
                   ),
                 ],
               ),

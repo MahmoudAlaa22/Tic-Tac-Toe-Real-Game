@@ -38,4 +38,5 @@ Future<void> initServiceLocator() async {
   //! ############################### Bloc Or Cubit ###############################
   serviceLocator.registerFactory(() => ThemeCubit());
   serviceLocator.registerFactory(() => SplashAndOnboardingCubit());
+  serviceLocator.registerFactory(() => LoginCubit());
 }

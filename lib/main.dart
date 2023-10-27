@@ -29,10 +29,13 @@ class MyApp extends StatelessWidget {
                         serviceLocator<ThemeCubit>()..excute(theme: theme)),
                 BlocProvider(
                     create: (_) => serviceLocator<SplashAndOnboardingCubit>()),
+                BlocProvider(
+                    create: (_) => serviceLocator<LoginCubit>()),
               ],
               child: BlocBuilder<ThemeCubit, ThemeState>(
                 buildWhen: (previous, current) =>
                     current is ThemeLoadedState ||
+
                     current is LanguageLoadedState,
                 builder: (context, state) {
                   final settingCubit = ThemeCubit.get(context);
