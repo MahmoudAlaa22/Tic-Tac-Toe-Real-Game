@@ -11,7 +11,7 @@ class LoginCubit extends Cubit<LoginState> {
   static LoginCubit get(context) => BlocProvider.of(context);
   // todo(3): create method called signInWithGoogle
   Future<GoogleSignInAccount?> signInWithGoogle() async {
-    final googleSignIn = GoogleSignIn();
+    final googleSignIn = GoogleSignIn();  
     return await googleSignIn.signIn();
   }
 
