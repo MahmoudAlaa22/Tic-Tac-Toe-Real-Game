@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Tic Tac Toe Game</string>
     <string name="facebook_app_id">261911570179750</string>
+    <string name="fb_login_protocol_scheme">fb261911570179750</string>
     <string name="facebook_client_token">6febe34a36344909759c871878d47cc3</string>
 </resources>
