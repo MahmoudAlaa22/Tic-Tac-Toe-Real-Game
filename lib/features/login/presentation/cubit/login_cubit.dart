@@ -3,7 +3,6 @@ import 'dart:developer';
 import 'package:flutter_login_facebook/flutter_login_facebook.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import '../../../../core/core_export.dart';
-
 part 'login_state.dart';
 
 class LoginCubit extends Cubit<LoginState> {

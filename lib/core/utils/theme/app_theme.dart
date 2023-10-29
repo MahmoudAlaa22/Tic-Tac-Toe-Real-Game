@@ -58,6 +58,9 @@ class AppThemes {
         fillColor: MaterialStatePropertyAll<Color>(
       AppColors.lightTheme.blue,
     )),
+    progressIndicatorTheme: ProgressIndicatorThemeData(
+        color: AppColors.lightTheme.blue,
+        linearTrackColor: AppColors.lighterGray),
   );
 
   static ThemeData darkTheme = ThemeData.dark().copyWith(
@@ -115,5 +118,8 @@ class AppThemes {
         fillColor: MaterialStatePropertyAll<Color>(
       AppColors.darkTheme.blue,
     )),
+    progressIndicatorTheme: ProgressIndicatorThemeData(
+        color: AppColors.darkTheme.blue,
+        linearTrackColor: AppColors.darkTheme.darkBlue),
   );
 }

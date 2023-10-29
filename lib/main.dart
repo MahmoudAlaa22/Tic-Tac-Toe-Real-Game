@@ -35,7 +35,6 @@ class MyApp extends StatelessWidget {
               child: BlocBuilder<ThemeCubit, ThemeState>(
                 buildWhen: (previous, current) =>
                     current is ThemeLoadedState ||
-
                     current is LanguageLoadedState,
                 builder: (context, state) {
                   final settingCubit = ThemeCubit.get(context);

@@ -14,6 +14,8 @@ Route<dynamic> onGenerate(RouteSettings settings) {
       return CupertinoPageRoute(builder: (_) => const OnBoardingPage());
     case AppRoutes.loginPageRoute:
       return CupertinoPageRoute(builder: (_) => const LoginPage());
+    case AppRoutes.preparingpageRoute:
+      return CupertinoPageRoute(builder: (_) => const Preparingpage());
     default:
       return CupertinoPageRoute(builder: (_) => Container());
   }

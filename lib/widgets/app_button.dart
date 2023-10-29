@@ -5,12 +5,14 @@ class AppButton extends StatelessWidget {
     super.key,
     this.image,
     this.color,
+    this.imageColor,
     this.hasBorder = false,
     required this.title,
     required this.onTap,
   });
   final String? image;
   final Color? color;
+  final Color? imageColor;
   final bool hasBorder;
   final String title;
   final Function() onTap;
@@ -28,7 +30,12 @@ class AppButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            if (image != null) SvgPicture.asset(image!),
+            if (image != null)
+              SvgPicture.asset(
+                image!,
+                colorFilter:
+                    imageColor == null ? null : ColorFilter.mode(imageColor!,BlendMode.srcIn),
+              ),
             Text(
               title,
               style: theme!.themeData.textTheme.bodyLarge!.copyWith(
