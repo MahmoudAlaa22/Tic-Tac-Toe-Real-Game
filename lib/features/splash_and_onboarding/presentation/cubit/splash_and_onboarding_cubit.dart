@@ -26,7 +26,8 @@ class SplashAndOnboardingCubit extends Cubit<SplashAndOnboardingState> {
     final isOnBoardingScreenViewed =
         await serviceLocator<AppPreferences>().isOnBoardingScreenViewed();
     if (isOnBoardingScreenViewed) {
-      Navigator.pushReplacementNamed(context, AppRoutes.loginPageRoute);
+      // Navigator.pushReplacementNamed(context, AppRoutes.loginPageRoute);
+      Navigator.pushReplacementNamed(context, AppRoutes.preparingpageRoute);
     } else {
       await serviceLocator<AppPreferences>().setOnBoardingScreenViewed();
       Navigator.pushReplacementNamed(context, AppRoutes.onBoardingRoute);
@@ -39,5 +40,4 @@ class SplashAndOnboardingCubit extends Cubit<SplashAndOnboardingState> {
     Navigator.pushReplacementNamed(context, AppRoutes.loginPageRoute);
     await serviceLocator<AppPreferences>().setOnBoardingScreenViewed();
   }
-  
 }

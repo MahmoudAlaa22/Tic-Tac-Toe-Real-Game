@@ -39,4 +39,5 @@ Future<void> initServiceLocator() async {
   serviceLocator.registerFactory(() => ThemeCubit());
   serviceLocator.registerFactory(() => SplashAndOnboardingCubit());
   serviceLocator.registerFactory(() => LoginCubit());
+  serviceLocator.registerFactory(() => PreparingCubit());
 }
