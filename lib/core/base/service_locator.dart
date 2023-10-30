@@ -40,4 +40,6 @@ Future<void> initServiceLocator() async {
   serviceLocator.registerFactory(() => SplashAndOnboardingCubit());
   serviceLocator.registerFactory(() => LoginCubit());
   serviceLocator.registerFactory(() => PreparingCubit());
+  serviceLocator.registerFactory(() => DashboardCubit());
+  serviceLocator.registerFactory(() => HomeCubit());
 }

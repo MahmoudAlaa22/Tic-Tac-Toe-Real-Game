@@ -15,7 +15,7 @@ class LightTheme extends ThemeCustom {
   Color get inActiveColor => AppColors.lightGray;
 
   @override
-  BottomBarModel get bottomBar => BottomBarModel(
+  BottomBarThemeModel get bottomBar => BottomBarThemeModel(
         background: AppColors.lightTheme.blue,
         activeColor: AppColors.white,
         inActiveColor: AppColors.darkTheme.blue,
@@ -28,4 +28,7 @@ class LightTheme extends ThemeCustom {
 
   @override
   Color get boxBorderColor => AppColors.lightGray;
+  
+  @override
+  Color get containerBackground => AppColors.lighterGray;
 }

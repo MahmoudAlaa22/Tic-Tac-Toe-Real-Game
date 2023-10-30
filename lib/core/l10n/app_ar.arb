@@ -27,6 +27,7 @@
     "internetUnavailable": "اتصال الإنترنت غير متوفر",
     "tryAgainPrompt": "حاول ثانية",
     "gameHistory": "تاريخ اللعبة",
+    "empty":"فارغ",
     "playGamePrompt": "العب بعض الألعاب.",
     "startPlayingPrompt": "ابدأ بلعب الناس.",
     "wins": "يفوز",
