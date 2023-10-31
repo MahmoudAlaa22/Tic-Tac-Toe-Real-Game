@@ -39,6 +39,9 @@ class _AppImagesSVG {
   final String google = _filePathSVG("google");
   final String facebook = _filePathSVG("facebook");
   final String retry = _filePathSVG("retry");
+  final String friends = _filePathSVG("friends");
+  final String games = _filePathSVG("games");
+  final String home = _filePathSVG("home");
 }
 
 class _AppImagesJPG {

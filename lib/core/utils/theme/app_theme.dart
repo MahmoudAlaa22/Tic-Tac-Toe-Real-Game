@@ -53,7 +53,7 @@ class AppThemes {
             borderSide: const BorderSide(color: AppColors.lightGray))),
     dividerColor: AppColors.lightTheme.blue,
     dividerTheme:
-        const DividerThemeData(color: AppColors.lightGray, thickness: 2),
+        const DividerThemeData(color: AppColors.lightGray, thickness: 1),
     radioTheme: RadioThemeData(
         fillColor: MaterialStatePropertyAll<Color>(
       AppColors.lightTheme.blue,
@@ -113,7 +113,7 @@ class AppThemes {
             borderSide: const BorderSide(color: AppColors.darkerGray))),
     dividerColor: AppColors.darkTheme.blue,
     dividerTheme:
-        const DividerThemeData(color: AppColors.darkerGray, thickness: 2),
+        DividerThemeData(color: AppColors.darkTheme.darkBlue, thickness: 1),
     radioTheme: RadioThemeData(
         fillColor: MaterialStatePropertyAll<Color>(
       AppColors.darkTheme.blue,

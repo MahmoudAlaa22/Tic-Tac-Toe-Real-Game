@@ -1,10 +1,10 @@
-import 'package:bloc/bloc.dart';
-import 'package:equatable/equatable.dart';
+import '/core/core_export.dart';
 
 part 'home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
   HomeCubit() : super(HomeInitial());
+  static HomeCubit get(context) => BlocProvider.of(context);
 
   // todo(10): method called onPageLoad
   // this method will invoke the following [ getUserInfo, getUserGameHistory, getUserScoreboard, handleBottomBarNavigation(index: 0) ]

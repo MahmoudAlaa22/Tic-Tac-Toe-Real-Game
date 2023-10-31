@@ -14,7 +14,7 @@ class DarkTheme extends ThemeCustom {
   Color get inActiveColor => AppColors.darkTheme.darkBlue;
 
   @override
-  BottomBarModel get bottomBar => BottomBarModel(
+  BottomBarThemeModel get bottomBar => BottomBarThemeModel(
         background: AppColors.darkTheme.darkBlue,
         activeColor: AppColors.gray,
         inActiveColor: AppColors.darkTheme.darkerBlue,
@@ -26,4 +26,6 @@ class DarkTheme extends ThemeCustom {
       );
   @override
   Color get boxBorderColor => AppColors.darkGray;
+  @override
+  Color get containerBackground => AppColors.darkTheme.darkerBlue;
 }

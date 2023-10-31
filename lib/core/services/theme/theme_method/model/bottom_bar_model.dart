@@ -1,9 +1,9 @@
 import '../../../../core_export.dart';
 
-class BottomBarModel {
+class BottomBarThemeModel {
   final Color? background;
   final Color? activeColor;
   final Color? inActiveColor;
 
-  BottomBarModel({this.background, this.activeColor, this.inActiveColor});
+  BottomBarThemeModel({this.background, this.activeColor, this.inActiveColor});
 }

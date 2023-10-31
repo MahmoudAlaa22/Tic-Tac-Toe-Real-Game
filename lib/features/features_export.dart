@@ -6,3 +6,9 @@ export 'login/login_export.dart';
 
 //? preparing
 export 'preparing/preparing_export.dart';
+
+//? dashboard
+export 'dashboard/dashboard_export.dart';
+
+//? home
+export 'home/home_export.dart';

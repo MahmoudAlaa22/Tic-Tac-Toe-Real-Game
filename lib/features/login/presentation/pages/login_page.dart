@@ -1,7 +1,7 @@
-import 'package:tic_tac_toe_real_game/core/core_export.dart';
-import 'package:tic_tac_toe_real_game/widgets/app_button.dart';
-
+import '/core/core_export.dart';
+import '/widgets/app_button.dart';
 import '../../../features_export.dart';
+
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});

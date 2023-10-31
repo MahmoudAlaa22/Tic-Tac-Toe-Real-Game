@@ -27,6 +27,7 @@
     "internetUnavailable": "Internet Connection Unavailable",
     "tryAgainPrompt": "Try Again",
     "gameHistory": "Game History",
+    "empty":"Empty",
     "playGamePrompt": "Play some game.",
     "startPlayingPrompt": "Start playing folks.",
     "wins": "Wins",
