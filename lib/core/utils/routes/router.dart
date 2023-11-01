@@ -18,6 +18,8 @@ Route<dynamic> onGenerate(RouteSettings settings) {
       return CupertinoPageRoute(builder: (_) => const Preparingpage());
     case AppRoutes.dashboardPageRoute:
       return CupertinoPageRoute(builder: (_) => const DashboardPage());
+    case AppRoutes.gameHistoryPageRoute:
+      return CupertinoPageRoute(builder: (_) =>  GameHistoryPage());
     default:
       return CupertinoPageRoute(builder: (_) => Container());
   }

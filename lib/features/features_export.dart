@@ -12,3 +12,6 @@ export 'dashboard/dashboard_export.dart';
 
 //? home
 export 'home/home_export.dart';
+
+//? game history
+export 'game_history/game_history_export.dart';

@@ -10,6 +10,11 @@ class AppThemes {
     colorScheme: ThemeData().colorScheme.copyWith(
           secondary: AppColors.white,
         ),
+    appBarTheme: AppBarTheme(
+        titleTextStyle: AppTextStyles.header2.copyWith(color: AppColors.black),
+        iconTheme: const IconThemeData(color: AppColors.black),
+        elevation: 0,
+        backgroundColor: AppColors.white),
     scaffoldBackgroundColor: AppColors.white,
     iconTheme: const IconThemeData(
       color: AppColors.white,
@@ -27,7 +32,7 @@ class AppThemes {
       bodySmall: AppTextStyles.body2.copyWith(color: AppColors.gray),
     ),
     inputDecorationTheme: InputDecorationTheme(
-        contentPadding: const EdgeInsets.all(15),
+        contentPadding: EdgeInsets.all(AppPadding.p15),
         hintStyle: AppTextStyles.body1.copyWith(color: AppColors.gray),
         labelStyle: AppTextStyles.body1.copyWith(color: AppColors.gray),
         errorStyle: TextStyle(color: AppColors.lightTheme.red),
@@ -74,6 +79,11 @@ class AppThemes {
     iconTheme: IconThemeData(
       color: AppColors.darkTheme.dark,
     ),
+    appBarTheme: AppBarTheme(
+        titleTextStyle: AppTextStyles.header2.copyWith(color: AppColors.gray),
+        iconTheme: const IconThemeData(color: AppColors.gray),
+        elevation: 0,
+        backgroundColor: AppColors.darkTheme.dark),
     textTheme: TextTheme(
       displayLarge: AppTextStyles.header1.copyWith(color: AppColors.gray),
       displaySmall: AppTextStyles.header2.copyWith(color: AppColors.gray),
@@ -87,7 +97,7 @@ class AppThemes {
     ),
     primaryIconTheme: IconThemeData(color: AppColors.darkTheme.dark),
     inputDecorationTheme: InputDecorationTheme(
-        contentPadding: const EdgeInsets.all(15),
+        contentPadding: EdgeInsets.all(AppPadding.p15),
         hintStyle: AppTextStyles.body1.copyWith(color: AppColors.darkerGray),
         labelStyle: AppTextStyles.body1.copyWith(color: AppColors.darkerGray),
         errorStyle: TextStyle(color: AppColors.lightTheme.red),
@@ -98,7 +108,7 @@ class AppThemes {
         border: InputBorder.none,
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(AppRadius.r4),
-            borderSide: const BorderSide(color: AppColors.darkerGray)),
+            borderSide: BorderSide(color: AppColors.darkTheme.darkBlue)),
         focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(AppRadius.r4),
             borderSide: BorderSide(color: AppColors.lightTheme.blue)),

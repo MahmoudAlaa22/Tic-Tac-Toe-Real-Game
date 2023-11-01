@@ -5,10 +5,13 @@ class GameSummaryCard extends StatelessWidget {
       {super.key,
       required this.title,
       required this.items,
-      required this.emptyMessage});
+      required this.emptyMessage,
+      required this.onPressed,
+      });
   final String title;
   final String emptyMessage;
   final List<Widget> items;
+  final Function() onPressed;
   @override
   Widget build(BuildContext context) {
     final theme = ThemeCubit.get(context).themeCustom!;
@@ -17,12 +20,12 @@ class GameSummaryCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            TextButton(onPressed: onPressed, child: Text(
               title,
               style: theme.themeData.textTheme.headlineLarge!.copyWith(
                 color: theme.textColor.primary,
               ),
-            ),
+            )),
             SizedBox(
               height: 0.01.sh,
             ),

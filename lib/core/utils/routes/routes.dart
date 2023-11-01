@@ -4,4 +4,5 @@ class AppRoutes {
   static const String loginPageRoute ='LoginPage';
   static const String preparingpageRoute ='Preparingpage';
   static const String dashboardPageRoute ='DashboardPage';
+  static const String gameHistoryPageRoute ='GameHistoryPage';
 }
