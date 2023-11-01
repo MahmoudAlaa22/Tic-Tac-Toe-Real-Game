@@ -15,3 +15,6 @@ export 'home/home_export.dart';
 
 //? game history
 export 'game_history/game_history_export.dart';
+
+//? scoreboard
+export 'scoreboard/scoreboard_export.dart';

@@ -46,39 +46,14 @@ class HomePage extends StatelessWidget {
         ),
         GameSummaryCard(
           title: AppStrings.tr.scoreboard,
-          items: [
-            SizedBox(
-              height: 0.05.sh,
-              child: ListTile(
-                title: Row(
-                  children: [
-                    Icon(
-                      Icons.star,
-                      color: AppColors.lightTheme.yellow,
-                      size: 20,
-                    ),
-                    SizedBox(
-                      width: 0.02.sw,
-                    ),
-                    Text(
-                      '1. Mahmoud',
-                      style: theme.themeData.textTheme.bodyLarge!.copyWith(
-                        color: theme.textColor.primary,
-                      ),
-                    ),
-                  ],
-                ),
-                trailing: Text(
-                  '160',
-                  style: theme.themeData.textTheme.bodyMedium!.copyWith(
-                    color: AppColors.lightTheme.yellow,
-                  ),
-                ),
-              ),
+          items: const [
+            ScoreboardItem(
+              title: 'Mahmoud',
+              score: '140',
             ),
           ],
           emptyMessage: AppStrings.tr.startPlayingPrompt,
-          onPressed: (){},
+          onPressed: ()=> Navigator.pushNamed(context, AppRoutes.scoreboardPageRoute)
         ),
       ],
     );
